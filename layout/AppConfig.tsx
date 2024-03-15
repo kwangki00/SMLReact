@@ -237,7 +237,7 @@ const AppConfig = (props: AppConfigProps) => {
                 ></RadioButton>
                 <label htmlFor="mode1">좌측고정</label>
               </div>
-              <div className="flex align-items-center gap-2 w-6">
+              {/* <div className="flex align-items-center gap-2 w-6">
                 <RadioButton
                   name="menuMode"
                   value={"overlay"}
@@ -246,7 +246,7 @@ const AppConfig = (props: AppConfigProps) => {
                   inputId="mode2"
                 ></RadioButton>
                 <label htmlFor="mode2">오버레이</label>
-              </div>
+              </div> */}
               {/* <div className="flex align-items-center gap-2 w-6 ">
                 <RadioButton
                   name="menuMode"
@@ -277,7 +277,7 @@ const AppConfig = (props: AppConfigProps) => {
                 ></RadioButton>
                 <label htmlFor="mode7">Drawer</label>
               </div> */}
-              <div className="flex align-items-center gap-2 w-6">
+              {/* <div className="flex align-items-center gap-2 w-6">
                 <RadioButton
                   name="menuMode"
                   value={"reveal"}
@@ -286,7 +286,7 @@ const AppConfig = (props: AppConfigProps) => {
                   inputId="mode5"
                 ></RadioButton>
                 <label htmlFor="mode6">오버형태</label>
-              </div>
+              </div> */}
               <div className="flex align-items-center gap-2 w-6">
                 <RadioButton
                   name="menuMode"
@@ -326,7 +326,7 @@ const AppConfig = (props: AppConfigProps) => {
               </div>
             </div> */}
 
-            <h5>입력스타일</h5>
+            {/* <h5>입력스타일</h5>
             <div className="flex">
               <div className="field-radiobutton flex-1">
                 <RadioButton
@@ -348,7 +348,7 @@ const AppConfig = (props: AppConfigProps) => {
                 ></RadioButton>
                 <label htmlFor="filled_input">Filled</label>
               </div>
-            </div>
+            </div> */}
           </>
         )}
         {/* <h5>Ripple Effect</h5>

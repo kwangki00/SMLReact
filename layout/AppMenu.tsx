@@ -5,11 +5,10 @@ const AppMenu = () => {
   const model: MenuModel[] = [
     {
       label: "기준정보",
-      icon: "pi pi-home",
+      icon: "pi pi-info-circle",
       items: [
         {
           label: "검사기준코드 관리",
-          icon: "pi pi-fw pi-home",
           items: [
             {
               label: "검사기준코드",
@@ -41,39 +40,39 @@ const AppMenu = () => {
     },
     {
       label: "접수관리",
-      icon: "pi pi-home",
+      icon: "pi pi-clone",
     },
     {
       label: "결과관리",
-      icon: "pi pi-home",
+      icon: "pi pi-book",
     },
     {
       label: "종합검진",
-      icon: "pi pi-home",
+      icon: "pi pi-calendar-plus",
     },
     {
       label: "외주관리",
-      icon: "pi pi-home",
+      icon: "pi pi-check-square",
     },
     {
       label: "소모품관리",
-      icon: "pi pi-home",
+      icon: "pi pi-qrcode",
     },
     {
       label: "매수관리",
-      icon: "pi pi-home",
+      icon: "pi pi-money-bill",
     },
     {
       label: "조회관리",
-      icon: "pi pi-home",
+      icon: "pi pi-search",
     },
     {
       label: "통계관리",
-      icon: "pi pi-home",
+      icon: "pi pi-chart-line",
     },
     {
       label: "재외주병리",
-      icon: "pi pi-home",
+      icon: "pi pi-credit-card",
     },
   ];
 

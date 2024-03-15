@@ -1,5 +1,11 @@
 import { InputText } from "primereact/inputtext";
-import { forwardRef, useContext, useImperativeHandle, useRef } from "react";
+import {
+  forwardRef,
+  useContext,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 import { LayoutContext } from "./context/layoutcontext";
 import type { AppTopbarRef } from "@/types";
 
@@ -19,7 +25,7 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
   const { layoutConfig } = useContext(LayoutContext);
   const bellRef = useRef(null);
   const avatarRef = useRef(null);
-
+  const [title, Settitle] = useState("결과관리");
   const onMenuButtonClick = () => {
     onMenuToggle();
   };
@@ -164,9 +170,17 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
       <div className="layout-topbar-end">
         <div className="layout-topbar-actions-start flex">
           {/*헤더 현재페이지 타이틀*/}
-          <div className="layout-topbar-title">결과조회</div>
+          <div className="layout-topbar-title">
+            {title}
+            <a className="p-ripple">
+              <i className="pi pi-star-fill"></i>
+            </a>
+          </div>
+          {/* 가로 즐겨찾기 */}
           <MegaMenu model={model} className="layout-megamenu" />
         </div>
+
+        {/* 검색영역및사용사설정영역 */}
         <div className="layout-topbar-actions-end">
           <ul className="layout-topbar-items">
             <li className="layout-topbar-search">
