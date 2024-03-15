@@ -1,0 +1,43 @@
+html {
+  height: 100%;
+  font-size: $scale;
+}
+
+body {
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  background: var(--surface-ground);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+.p-toast {
+  &.p-toast-top-right,
+  &.p-toast-top-left,
+  &.p-toast-top-center {
+    top: 85px;
+  }
+}
+.note-num {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  z-index: 3;
+  height: 1.1rem;
+  width: 1.1rem;
+  line-height: 1.2rem;
+  text-align: center;
+  background-color: rgb(219, 13, 13);
+  border-radius: 10rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  color: white;
+}
