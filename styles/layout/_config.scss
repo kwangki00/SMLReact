@@ -1,19 +1,19 @@
 .layout-config-button {
   display: block;
   position: fixed;
-  width: 3rem;
-  height: 3rem;
-  line-height: 3rem;
-  background: var(--primary-color);
-  color: var(--primary-color-text);
+  width: 2.188rem;
+  height: 2.188rem;
+  line-height: 2.188rem;
+  background: #9d9d9d;
+  color: white;
   text-align: center;
-  bottom: 1%;
-  right: 0;
-  margin-top: -1.5rem;
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  top: 0.8%;
+  right: 1.5%;
+  border-radius: 10rem;
+  // border-top-left-radius: var(--border-radius);
+  // border-bottom-left-radius: var(--border-radius);
+  // border-top-right-radius: 0;
+  // border-bottom-right-radius: 0;
   transition: background-color var(--transition-duration);
   overflow: hidden;
   cursor: pointer;
@@ -34,7 +34,7 @@
   }
 
   i {
-    font-size: 2rem;
+    font-size: 1.4rem;
     line-height: inherit;
     transform: rotate(0deg);
     transition: transform 1s;

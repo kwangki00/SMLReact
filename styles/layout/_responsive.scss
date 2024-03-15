@@ -80,7 +80,21 @@
   .blocked-scroll {
     overflow: hidden;
   }
-
+  .layout-config-button {
+    position: fixed;
+    top: auto;
+    bottom: 3%;
+    right: 3%;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    i {
+      font-size: 2.1rem;
+      line-height: inherit;
+      transform: rotate(0deg);
+      transition: transform 1s;
+    }
+  }
   .layout-topbar-actions-start .layout-megamenu {
     display: none;
     height: 0;
