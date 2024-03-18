@@ -27,14 +27,9 @@ const AppConfig = (props: AppConfigProps) => {
     { name: "purple", color: "#9C27B0" },
     { name: "deeppurple", color: "#673AB7" },
     { name: "blue", color: "#2196F3" },
-    { name: "lightblue", color: "#03A9F4" },
     { name: "cyan", color: "#00BCD4" },
     { name: "teal", color: "#009688" },
     { name: "green", color: "#4CAF50" },
-    { name: "lightgreen", color: "#8BC34A" },
-    { name: "lime", color: "#CDDC39" },
-    { name: "yellow", color: "#FFEB3B" },
-    { name: "amber", color: "#FFC107" },
     { name: "orange", color: "#FF9800" },
     { name: "deeporange", color: "#FF5722" },
     { name: "brown", color: "#795548" },
@@ -70,16 +65,8 @@ const AppConfig = (props: AppConfigProps) => {
     { name: "cyan", color: "#0097A7" },
     { name: "teal", color: "#00796B" },
     { name: "green", color: "#43A047" },
-    { name: "lightgreen", color: "#689F38" },
-    { name: "lime", color: "#AFB42B" },
-    { name: "yellow", color: "#FBC02D" },
-    { name: "amber", color: "#FFA000" },
-    { name: "orange", color: "#FB8C00" },
     { name: "deeporange", color: "#D84315" },
     { name: "brown", color: "#5D4037" },
-    { name: "grey", color: "#616161" },
-    { name: "bluegrey", color: "#546E7A" },
-    { name: "indigo", color: "#3F51B5" },
   ];
 
   useEffect(() => {
@@ -360,7 +347,7 @@ const AppConfig = (props: AppConfigProps) => {
         <img
           src="/layout/images/MainTheme.png"
           alt="avatar"
-          style={{ width: "100px", height: "100px" }}
+          style={{ width: "50px", height: "50px" }}
         />
         <div className="flex">
           <div className="flex align-items-center">
@@ -394,7 +381,7 @@ const AppConfig = (props: AppConfigProps) => {
             <img
               src="/layout/images/MenubarTheme.png"
               alt="avatar"
-              style={{ width: "100px", height: "100px" }}
+              style={{ width: "50px", height: "50px" }}
             />
             {layoutConfig.colorScheme !== "dark" ? (
               <div className="flex flex-wrap row-gap-3">
@@ -434,6 +421,11 @@ const AppConfig = (props: AppConfigProps) => {
             )}
 
             <h5>상단테마</h5>
+            <img
+              src="/layout/images/TopbarTheme.png"
+              alt="avatar"
+              style={{ width: "50px", height: "50px" }}
+            />
             <div className="flex flex-wrap row-gap-3">
               {topbarThemes.map((t, i) => {
                 return (
