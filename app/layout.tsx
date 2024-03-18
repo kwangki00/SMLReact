@@ -5,7 +5,7 @@ import "../styles/layout/layout.scss";
 import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";
 import "primereact/resources/primereact.css";
-import "./style.css";
+import "../styles/custom/_component.scss";
 export default function RootLayout({
   children,
 }: {
