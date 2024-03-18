@@ -9,6 +9,9 @@ import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import { Calendar } from "primereact/calendar";
 import { MultiSelect } from "primereact/multiselect";
+import { TabView, TabPanel } from "primereact/tabview";
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
 
 const controltest = () => {
   //Dropdown
@@ -40,6 +43,9 @@ const controltest = () => {
 
   //Multi select
   const [selectedCities, setSelectedCities] = useState(null);
+
+  //Table
+  const [products, setProducts] = useState([]);
 
   // function controltest() {
   return (
@@ -478,6 +484,67 @@ const controltest = () => {
                     aria-label="Cancel"
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-12 md:col-6">
+          <div className="card p-fluid">
+            <h5>Others</h5>
+            <div className="field grid">
+              <label htmlFor="name3" className="col-12 mb-2 md:col-3 md:mb-0">
+                Tab
+              </label>
+              <div className="col-12 md:col-9">
+                <TabView>
+                  <TabPanel header="Header I">
+                    <p className="m-0">Tab item 1</p>
+                  </TabPanel>
+                  <TabPanel header="Header II">
+                    <p className="m-0">Tab item 2</p>
+                  </TabPanel>
+                  <TabPanel header="Header III">
+                    <p className="m-0">Tab item 2</p>
+                  </TabPanel>
+                </TabView>
+              </div>
+            </div>
+            <div className="field grid">
+              <label htmlFor="name3" className="col-12 mb-2 md:col-3 md:mb-0">
+                Data table
+              </label>
+              <div className="col-12 md:col-9">
+                <DataTable
+                  value={products}
+                  sortMode="multiple"
+                  tableStyle={{ minWidth: "50rem" }}
+                >
+                  <Column
+                    field="code"
+                    header="Code"
+                    sortable
+                    style={{ width: "25%" }}
+                  ></Column>
+                  <Column
+                    field="name"
+                    header="Name"
+                    sortable
+                    style={{ width: "25%" }}
+                  ></Column>
+                  <Column
+                    field="category"
+                    header="Category"
+                    sortable
+                    style={{ width: "25%" }}
+                  ></Column>
+                  <Column
+                    field="quantity"
+                    header="Quantity"
+                    sortable
+                    style={{ width: "25%" }}
+                  ></Column>
+                </DataTable>
               </div>
             </div>
           </div>
