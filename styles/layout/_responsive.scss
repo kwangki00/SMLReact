@@ -1,11 +1,4 @@
 @media screen and (min-width: $breakpoint) {
-  .layout-topbar-title {
-    font-size: 1.5rem;
-    color: var(--topbar-item-text-title-color);
-    text-align: center;
-    vertical-align: middle;
-    font-weight: bold;
-  }
   .layout-breadcrumb-container {
     display: none;
   }
