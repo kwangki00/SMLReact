@@ -55,3 +55,19 @@ $accentTextColor: #ffffff;
 .p-button {
   padding: 0.464rem 0.75rem;
 }
+
+.page-content {
+  width: 100%;
+  height: calc(100vh - 13rem);
+}
+
+.content-body {
+  height: -webkit-fill-available;
+  flex: 0 0 auto;
+  padding: 0.5rem;
+}
+.label {
+  width: 10rem;
+  padding-left: 1rem;
+  font-weight: bold;
+}
