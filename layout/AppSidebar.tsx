@@ -43,11 +43,13 @@ const AppSidebar = () => {
         ></button>
       </div>
 
+      {layoutConfig.menuProfilePosition === "start" && <AppMenuProfile />}
       <div className="layout-menu-container">
         <MenuProvider>
           <AppMenu />
         </MenuProvider>
       </div>
+      {layoutConfig.menuProfilePosition === "end" && <AppMenuProfile />}
     </React.Fragment>
   );
 };

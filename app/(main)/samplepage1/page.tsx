@@ -26,6 +26,14 @@ const SamplePage1 = () => {
 
   //CheckBox
   const [ingredients, setIngredients] = useState([]);
+  const onIngredientsChange = (e) => {
+    let _ingredients = [...ingredients];
+
+    if (e.checked) _ingredients.push(e.value);
+    else _ingredients.splice(_ingredients.indexOf(e.value), 1);
+
+    setIngredients(_ingredients);
+  };
 
   //RadioButton
   const [ingredient, setIngredient] = useState("");
@@ -48,7 +56,12 @@ const SamplePage1 = () => {
               접수일자
             </label>
             <div className="col-12 md:col-2">
-              <Calendar id="buttondisplay" value={date} showIcon />
+              <Calendar
+                id="buttondisplay"
+                value={date}
+                onChange={(e) => setDate(e.value)}
+                showIcon
+              />
             </div>
             <label className="col-12 mb-2 md:col-2 md:mb-0 label">
               접수번호
@@ -330,7 +343,7 @@ const SamplePage1 = () => {
         <div className="col-12 md:col-12">
           <div className="card p-fluid">
             <h5>선택정보</h5>
-            <div className="col-12 md:col-9" style={{ height: "calc(30vh);" }}>
+            <div className="col-12 md:col-9" styleName="height: calc(30vh);">
               <DataTable
                 value={products}
                 sortMode="multiple"
@@ -367,10 +380,7 @@ const SamplePage1 = () => {
           <div className="col-12 md:col-12">
             <div className="card p-fluid">
               <h5>History</h5>
-              <div
-                className="col-12 md:col-9"
-                style={{ height: "calc(30vh);" }}
-              >
+              <div className="col-12 md:col-9" styleName="height: calc(30vh);">
                 <DataTable
                   value={products}
                   sortMode="multiple"

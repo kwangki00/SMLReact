@@ -1,17 +1,10 @@
 @media screen and (min-width: $breakpoint) {
-  .layout-sidebar {
-    box-shadow: none;
-  }
   .layout-container {
     &.layout-slim-plus {
       .layout-sidebar {
-        padding: 0.5rem;
-        border: 1px solid #f1f1f1;
-        margin: 1rem;
         width: 7rem;
         overflow: visible;
         z-index: 998;
-        border-radius: 1rem;
 
         .layout-menu-container {
           overflow: auto;
@@ -131,6 +124,7 @@
             a {
               padding-right: 0.5rem;
             }
+
             li {
               a {
                 padding-left: 0.5rem;

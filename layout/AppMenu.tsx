@@ -41,24 +41,6 @@ const AppMenu = () => {
     {
       label: "접수관리",
       icon: "pi pi-clone",
-      items: [
-        {
-          label: "의뢰지접수",
-          to: "/samplepage1",
-        },
-        {
-          label: "OCS접수 및 결과확인",
-          to: "",
-        },
-        {
-          label: "바코드관리",
-          to: "",
-        },
-        {
-          label: "접수번호 할당",
-          to: "",
-        },
-      ],
     },
     {
       label: "결과관리",

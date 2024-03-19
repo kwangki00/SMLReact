@@ -2,46 +2,6 @@
   .layout-breadcrumb-container {
     display: none;
   }
-  .layout-topbar-title {
-    font-size: 1.5rem;
-    color: var(--topbar-item-text-title-color);
-    text-align: center;
-    vertical-align: middle;
-    font-weight: bold;
-    display: flex;
-    i {
-      font-size: 1.5rem;
-      padding-top: 1.4rem;
-    }
-    > h2 {
-      margin-top: 1.2rem;
-      font-size: 1.5rem;
-      margin-left: 0.5rem;
-    }
-
-    > a {
-      margin-top: 0.7rem;
-      width: 2.5rem;
-      height: 2.5rem;
-      user-select: none;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--topbar-item-text-color);
-
-      &:hover {
-        background-color: var(--topbar-item-hover-bg);
-        transition: background-color var(--transition-duration);
-      }
-      > i {
-        color: rgb(255, 115, 0);
-        padding-top: 0;
-        font-size: 1.5rem;
-      }
-    }
-  }
   .layout-container {
     &.layout-static {
       .layout-sidebar {
@@ -126,15 +86,6 @@
       line-height: inherit;
       transform: rotate(0deg);
       transition: transform 1s;
-    }
-  }
-  .layout-topbar-title {
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    a {
-      visibility: collapse;
     }
   }
   .layout-topbar-actions-start .layout-megamenu {
