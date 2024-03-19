@@ -25,7 +25,7 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
   const { layoutConfig } = useContext(LayoutContext);
   const bellRef = useRef(null);
   const avatarRef = useRef(null);
-  const [title, Settitle] = useState("결과관리");
+  const [title, Settitle] = useState("의뢰지접수");
   const onMenuButtonClick = () => {
     onMenuToggle();
   };
@@ -171,7 +171,10 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
         <div className="layout-topbar-actions-start flex">
           {/*헤더 현재페이지 타이틀*/}
           <div className="layout-topbar-title">
-            {title}
+            <div>
+              <i className="pi pi-clone"></i>
+            </div>
+            <h2>{title}</h2>
             <a className="p-ripple">
               <i className="pi pi-star-fill"></i>
             </a>

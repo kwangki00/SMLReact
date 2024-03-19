@@ -1,7 +1,7 @@
 .layout-preloader-container {
   width: 100%;
   min-height: 100%;
-  background-color: var(--primary-color);
+  background-color: #3f51b5;
   position: absolute;
 }
 
@@ -62,4 +62,4 @@
     stroke-dashoffset: 187;
     transform: rotate(450deg);
   }
-}
+}/*# sourceMappingURL=preloading.css.map */
