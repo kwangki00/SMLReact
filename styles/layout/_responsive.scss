@@ -2,6 +2,12 @@
   .layout-breadcrumb-container {
     display: none;
   }
+  .field .label {
+    min-width: 5rem;
+    margin-bottom: 0;
+    padding-left: 0.5rem;
+  }
+
   .layout-topbar-title {
     font-size: 1.5rem;
     color: var(--topbar-item-text-title-color);
@@ -112,6 +118,18 @@
 
 //Mobile
 @media screen and (max-width: ($breakpoint - 1)) {
+  .layout-content-wrapper .layout-content {
+    padding: 1rem;
+  }
+  .layout-content .page-content {
+    height: 100%;
+  }
+  .page-content .col-12 {
+    margin-bottom: 1rem;
+  }
+  .field .label {
+    margin-bottom: 0.5rem;
+  }
   .blocked-scroll {
     overflow: hidden;
   }

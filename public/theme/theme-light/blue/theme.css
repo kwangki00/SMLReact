@@ -3603,7 +3603,7 @@
     padding: 1.25rem;
     border: 0 none;
     color: rgba(0, 0, 0, 0.87);
-    background: #ffffff;
+    background: #f1f1f1;
     font-weight: 400;
     border-radius: 4px;
     transition: none;
@@ -3622,7 +3622,7 @@
     color: rgba(0, 0, 0, 0.87);
   }
   .p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link {
-    background: #ffffff;
+    background: #f1f1f1;
     border-color: transparent;
     color: rgba(0, 0, 0, 0.87);
     border-bottom-right-radius: 0;
@@ -4877,7 +4877,7 @@
     padding: 1.25rem;
     border: 0 none;
     color: rgba(0, 0, 0, 0.87);
-    background: #ffffff;
+    background: #f1f1f1;
     font-weight: 400;
     border-radius: 4px;
     transition: none;
@@ -4902,7 +4902,7 @@
     margin-bottom: 0;
   }
   .p-panelmenu .p-panelmenu-header.p-highlight > a {
-    background: #ffffff;
+    background: #f1f1f1;
     border-color: transparent;
     color: rgba(0, 0, 0, 0.87);
     border-bottom-right-radius: 0;
