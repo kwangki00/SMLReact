@@ -4,7 +4,7 @@ import { Calendar } from "primereact/calendar";
 import { InputText } from "primereact/inputtext";
 import { RadioButton } from "primereact/radiobutton";
 import { TabPanel, TabView } from "primereact/tabview";
-import React, { useState } from "react";
+import React, { useState, Dispatch, SetStateAction } from "react";
 import { Dropdown } from "primereact/dropdown";
 import { InputSwitch } from "primereact/inputswitch";
 import { Accordion, AccordionTab } from "primereact/accordion";
@@ -13,8 +13,9 @@ import { Badge } from "primereact/badge";
 
 const Samplepage2 = () => {
   const [switchValue, setSwitchValue] = useState(false); //switch
-  const [activeIndex, setActiveIndex] = useState([0, 1, 2]); //accodian state
+  const [activeIndex, setActiveIndex] = useState([0, 1, 2] as any); //accodian state
   const [radioValue, setRadioValue] = useState(null); //radiobutton
+
   return (
     <div className="page-content">
       <div className="card">

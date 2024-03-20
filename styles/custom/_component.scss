@@ -30,7 +30,17 @@ $accentTextColor: #ffffff;
 .p-radiobutton-box {
   border: 1px solid $gray0 !important;
 }
-
+.field-checkbox,
+.field-radiobutton {
+  margin-bottom: 0;
+}
+//Radiobutton Group
+.radiobutton-group {
+  margin-bottom: 0;
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
 .page-content {
   width: 100%;
   height: calc(100vh - 13rem);
