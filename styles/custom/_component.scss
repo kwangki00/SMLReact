@@ -3,33 +3,13 @@ $gray0: #565d6d;
 $accentTextColor: #ffffff;
 
 //Input
-.p-inputtext,
-.p-multiselect-label {
-  padding: 0.3945rem;
-}
+
 .p-inputtext:enabled:hover {
   border-color: $accentColor !important;
 }
 .p-inputtext:enabled:focus {
   box-shadow: inset 0 0 0 1px #3f51b5, inset 0 0 0 1px #3f51b5,
     inset 0 0 0 1px #3f51b5, inset 0 0 0 1px #3f51b5 !important;
-}
-
-//Input Group style
-.p-button.p-button-warning:not(:disabled):hover,
-.p-buttonset.p-button-warning > .p-button:not(:disabled):hover,
-.p-splitbutton.p-button-warning > .p-button:not(:disabled):hover,
-.p-fileupload-choose.p-button-warning:not(:disabled):hover {
-  background: rgba($color: $accentColor, $alpha: 0.5) !important;
-  border: 1px solid $gray0 !important;
-  color: $accentTextColor !important;
-}
-.p-button.p-button-warning,
-.p-buttonset.p-button-warning > .p-button,
-.p-splitbutton.p-button-warning > .p-button,
-.p-fileupload-choose.p-button-warning {
-  background: rgba($color: #ffffff00, $alpha: 0) !important;
-  border: 1px solid $gray0 !important;
 }
 
 //CheckBox
@@ -49,11 +29,6 @@ $accentTextColor: #ffffff;
 
 .p-radiobutton-box {
   border: 1px solid $gray0 !important;
-}
-
-//Button
-.p-button {
-  padding: 0.464rem 0.75rem;
 }
 
 .page-content {

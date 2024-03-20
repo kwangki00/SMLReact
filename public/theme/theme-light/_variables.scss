@@ -20,8 +20,8 @@ $emphasis-lower: rgba(0, 0, 0, 0.12);
 $overlayColor: #000000;
 
 //global
-$fontFamily: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
-  Lucida Grande, sans-serif;
+$fontFamily: Pretendard-Regular, Roboto, Helvetica Neue Light, Helvetica Neue,
+  Helvetica, Arial, Lucida Grande, sans-serif;
 $fontSize: 1rem;
 $fontWeight: normal;
 $textColor: $emphasis-high;
@@ -125,7 +125,7 @@ $passwordMediumBg: #fbc02d;
 $passwordStrongBg: #689f38;
 
 //button
-$buttonPadding: 0.714rem 1rem;
+$buttonPadding: 0.395rem 1rem;
 $buttonIconOnlyWidth: 3rem;
 $buttonIconOnlyPadding: 0.714rem;
 $buttonBg: $primaryColor;

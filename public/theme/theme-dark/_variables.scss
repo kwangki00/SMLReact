@@ -27,8 +27,8 @@ $shade800: #1f2d40 !default; //elevated surface
 $shade900: #17212f !default; //ground surface
 $hoverBg: rgba(255, 255, 255, 0.03) !default;
 //global
-$fontFamily: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial,
-  Lucida Grande, sans-serif;
+$fontFamily: Pretendard-Regular, Roboto, Helvetica Neue Light, Helvetica Neue,
+  Helvetica, Arial, Lucida Grande, sans-serif;
 $fontSize: 1rem;
 $fontWeight: normal;
 $textColor: $emphasis-high;
@@ -132,7 +132,7 @@ $passwordMediumBg: #fff59d;
 $passwordStrongBg: #c5e1a5;
 
 //button
-$buttonPadding: 0.714rem 1rem;
+$buttonPadding: 0.395rem 1rem;
 $buttonIconOnlyWidth: 3rem;
 $buttonIconOnlyPadding: 0.714rem;
 $buttonBg: $primaryColor;
