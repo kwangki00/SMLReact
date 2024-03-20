@@ -14,6 +14,7 @@ import { Badge } from "primereact/badge";
 const Samplepage2 = () => {
   const [switchValue, setSwitchValue] = useState(false); //switch
   const [activeIndex, setActiveIndex] = useState([0, 1, 2]); //accodian state
+  const [radioValue, setRadioValue] = useState(null); //radiobutton
   return (
     <div className="page-content">
       <div className="card">
@@ -104,7 +105,7 @@ const Samplepage2 = () => {
                           <span className="flex align-items-center gap-2 w-full">
                             <Avatar icon="pi pi-user" shape="circle" />
                             <span className="font-bold white-space-nowrap">
-                              수진자정보
+                              수진자 정보
                             </span>
                           </span>
                         }
@@ -112,20 +113,51 @@ const Samplepage2 = () => {
                         <div>
                           <div className="field grid">
                             <label htmlFor="email3" className="label">
-                              병원명
+                              수진자명
                             </label>
                             <div className="col-12 md:col-3">
                               <InputText
                                 id="email3"
                                 type="text"
-                                placeholder="병원코드입력"
+                                placeholder="수진자명"
                               />
                             </div>
+                            <label htmlFor="email3" className="label">
+                              차트번호
+                            </label>
                             <div className="col-12 md:col-3">
-                              <Dropdown placeholder="병원선택" />
+                              <InputText
+                                id="email3"
+                                type="text"
+                                placeholder="차트번호"
+                              />
                             </div>
+                            <label htmlFor="email3" className="label">
+                              성별
+                            </label>
                             <div className="col-12 md:col-2">
-                              <Button outlined label="병원선택" />
+                              <div className="radiobutton-group">
+                                <div className="field-radiobutton">
+                                  <RadioButton
+                                    inputId="option1"
+                                    name="option"
+                                    value="man"
+                                    checked={radioValue === "man"}
+                                    onChange={(e) => setRadioValue(e.value)}
+                                  />
+                                  <label htmlFor="option1">남</label>
+                                </div>
+                                <div className="field-radiobutton">
+                                  <RadioButton
+                                    inputId="option2"
+                                    name="option"
+                                    value="woman"
+                                    checked={radioValue === "woman"}
+                                    onChange={(e) => setRadioValue(e.value)}
+                                  />
+                                </div>
+                                <label htmlFor="option2">여</label>
+                              </div>
                             </div>
                           </div>
                           <div className="field grid">
