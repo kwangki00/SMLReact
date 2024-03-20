@@ -533,7 +533,7 @@ p:last-child {
 }
 
 .layout-menu-dark {
-  --menu-bg: #1e1e1e;
+  --menu-bg: #1f2d40;
   --root-menuitem-text-color: rgba(255, 255, 255, 0.6);
   --menuitem-text-color: rgba(255, 255, 255, 0.87);
   --menuitem-hover-bg: hsla(0, 0%, 100%, 0.04);
@@ -1214,7 +1214,6 @@ p:last-child {
   }
   .layout-container.layout-slim-plus .layout-sidebar {
     padding: 0.5rem;
-    border: 1px solid #f1f1f1;
     margin: 1rem;
     width: 7rem;
     overflow: visible;
