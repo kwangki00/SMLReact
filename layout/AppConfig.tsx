@@ -23,7 +23,7 @@ const AppConfig = (props: AppConfigProps) => {
   const scales = [12, 13, 14, 15, 16];
   const componentThemes = [
     { name: "indigo", color: "#3F51B5" },
-    { name: "pink", color: "#E91E63" },
+    { name: "pink", color: "#A92450" },
     { name: "purple", color: "#9C27B0" },
     { name: "deeppurple", color: "#673AB7" },
     { name: "blue", color: "#2196F3" },
@@ -41,7 +41,7 @@ const AppConfig = (props: AppConfigProps) => {
     color: string;
   }[] = [
     { name: "light", color: "#FDFEFF" },
-    { name: "dark", color: "#434B54" },
+    { name: "dark", color: "#1f2d40" },
     { name: "indigo", color: "#1A237E" },
     { name: "bluegrey", color: "#37474F" },
     { name: "brown", color: "#4E342E" },
@@ -49,19 +49,19 @@ const AppConfig = (props: AppConfigProps) => {
     { name: "green", color: "#2E7D32" },
     { name: "deeppurple", color: "#4527A0" },
     { name: "deeporange", color: "#BF360C" },
-    { name: "pink", color: "#880E4F" },
+    { name: "pink", color: "#A92450" },
     { name: "purple", color: "#6A1B9A" },
     { name: "teal", color: "#00695C" },
   ];
 
   const topbarThemes = [
     { name: "lightblue", color: "#2E88FF" },
-    { name: "dark", color: "#363636" },
+    { name: "dark", color: "#1f2d40" },
     { name: "white", color: "#FDFEFF" },
     { name: "blue", color: "#1565C0" },
     { name: "deeppurple", color: "#4527A0" },
     { name: "purple", color: "#6A1B9A" },
-    { name: "pink", color: "#AD1457" },
+    { name: "pink", color: "#A92450" },
     { name: "cyan", color: "#0097A7" },
     { name: "teal", color: "#00796B" },
     { name: "green", color: "#43A047" },

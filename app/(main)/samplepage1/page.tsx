@@ -43,7 +43,7 @@ const SamplePage1 = () => {
     <div className="grid page-content">
       <div className="col-12 md:col-12">
         <div className="card p-fluid">
-          <div className="field grid">
+          <div className="grid align-content-center">
             <label className="col-12 mb-2 md:col-2 md:mb-0 label">
               접수일자
             </label>
@@ -330,7 +330,7 @@ const SamplePage1 = () => {
         <div className="col-12 md:col-12">
           <div className="card p-fluid">
             <h5>선택정보</h5>
-            <div className="col-12 md:col-9" style={{ height: "calc(30vh);" }}>
+            <div className="col-12 md:col-9">
               <DataTable
                 value={products}
                 sortMode="multiple"
@@ -367,10 +367,7 @@ const SamplePage1 = () => {
           <div className="col-12 md:col-12">
             <div className="card p-fluid">
               <h5>History</h5>
-              <div
-                className="col-12 md:col-9"
-                style={{ height: "calc(30vh);" }}
-              >
+              <div className="col-12 md:col-9">
                 <DataTable
                   value={products}
                   sortMode="multiple"

@@ -174,13 +174,13 @@ p:last-child {
 }
 
 .layout-topbar-dark {
-  --topbar-bg: #1e1e1e;
-  --topbar-start-bg: #1e1e1e;
-  --topbar-menu-button-bg: #E91E63;
+  --topbar-bg: #1f2d40;
+  --topbar-start-bg: #1f2d40;
+  --topbar-menu-button-bg: #e91e63;
   --topbar-menu-button-hover-bg: #c41953;
   --topbar-menu-button-text-color: #ffffff;
   --topbar-item-text-color: #ffffff;
-  --topbar-item-hover-bg: rgba(255,255,255,.12);
+  --topbar-item-hover-bg: rgba(255, 255, 255, 0.12);
 }
 
 .layout-topbar-deeppurple {
@@ -204,13 +204,13 @@ p:last-child {
 }
 
 .layout-topbar-pink {
-  --topbar-bg: #AD1457;
-  --topbar-start-bg: #880E4F;
-  --topbar-menu-button-bg: #F9A825;
+  --topbar-bg: #a92450;
+  --topbar-start-bg: #880e4f;
+  --topbar-menu-button-bg: #f9a825;
   --topbar-menu-button-hover-bg: #d18d1f;
   --topbar-menu-button-text-color: #212121;
   --topbar-item-text-color: #ffffff;
-  --topbar-item-hover-bg: rgba(255,255,255,.12);
+  --topbar-item-hover-bg: rgba(255, 255, 255, 0.12);
 }
 
 .layout-topbar-cyan {
@@ -613,13 +613,13 @@ p:last-child {
 }
 
 .layout-menu-pink {
-  --menu-bg: #880E4F;
+  --menu-bg: #a92450;
   --root-menuitem-text-color: #ffffff;
-  --menuitem-text-color: rgba(255,255,255,.6);
-  --menuitem-hover-bg: rgba(255,255,255,.12);
+  --menuitem-text-color: rgba(255, 255, 255, 0.6);
+  --menuitem-hover-bg: rgba(255, 255, 255, 0.12);
   --active-menuitem-text-color: #ffffff;
-  --active-menuitem-bg: rgba(255,255,255,.24);
-  --inline-menu-border-color: rgba(255,255,255,.24);
+  --active-menuitem-bg: rgba(255, 255, 255, 0.24);
+  --inline-menu-border-color: rgba(255, 255, 255, 0.24);
 }
 
 .layout-menu-purple {
@@ -726,9 +726,12 @@ p:last-child {
 }
 .layout-sidebar .layout-menu ul a.active-route {
   font-weight: 700;
+  background-color: var(--primary-600);
+  color: var(--surface-card);
 }
 .layout-sidebar .layout-menu ul a:hover {
   background-color: var(--menuitem-hover-bg);
+  color: var(--menuitem-text-color);
 }
 .layout-sidebar .layout-menu ul ul {
   overflow: hidden;

@@ -13,7 +13,7 @@ import { TabView, TabPanel } from "primereact/tabview";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 
-const controltest = () => {
+const Controltest = () => {
   //Dropdown
   const [selectedCity, setSelectedCity] = useState(null);
   const cities = [
@@ -25,15 +25,15 @@ const controltest = () => {
   ];
 
   //CheckBox
-  const [ingredients, setIngredients] = useState([]);
-  const onIngredientsChange = (e) => {
-    let _ingredients = [...ingredients];
+  // const [ingredients, setIngredients] = useState([]);
+  // const onIngredientsChange = (e) => {
+  //   let _ingredients = [...ingredients];
 
-    if (e.checked) _ingredients.push(e.value);
-    else _ingredients.splice(_ingredients.indexOf(e.value), 1);
+  //   if (e.checked) _ingredients.push(e.value);
+  //   else _ingredients.splice(_ingredients.indexOf(e.value), 1);
 
-    setIngredients(_ingredients);
-  };
+  //   setIngredients(_ingredients);
+  // };
 
   //RadioButton
   const [ingredient, setIngredient] = useState("");
@@ -106,7 +106,7 @@ const controltest = () => {
                 ChcekBox
               </label>
               <div className="col-12 md:col-9">
-                <div className="flex flex-wrap gap-3">
+                {/* <div className="flex flex-wrap gap-3">
                   <div className="flex align-items-center">
                     <Checkbox
                       inputId="ingredient1"
@@ -155,7 +155,7 @@ const controltest = () => {
                       Onion
                     </label>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -222,12 +222,7 @@ const controltest = () => {
               </label>
               <div className="col-12 md:col-9">
                 <div className="flex flex-wrap gap-3">
-                  <Calendar
-                    id="buttondisplay"
-                    value={date}
-                    onChange={(e) => setDate(e.value)}
-                    showIcon
-                  />
+                  <Calendar id="buttondisplay" value={date} showIcon />
                 </div>
               </div>
             </div>
@@ -554,4 +549,4 @@ const controltest = () => {
   );
 };
 
-export default controltest;
+export default Controltest;
