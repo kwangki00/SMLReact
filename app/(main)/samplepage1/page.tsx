@@ -12,6 +12,7 @@ import { MultiSelect } from "primereact/multiselect";
 import { TabView, TabPanel } from "primereact/tabview";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
+import AppFooter from "@/layout/AppFooter";
 
 const SamplePage1 = () => {
   //Dropdown
@@ -42,25 +43,25 @@ const SamplePage1 = () => {
   return (
     <div className="grid page-content">
       <div className="col-12 md:col-12">
-        <div className="card p-fluid">
-          <div className="grid align-content-center">
-            <label className="col-12 mb-2 md:col-2 md:mb-0 label">
-              접수일자
-            </label>
-            <div className="col-12 md:col-2">
-              <Calendar id="buttondisplay" value={date} showIcon />
+        <div className="card">
+          <div className="grid justify-content-between">
+            <div className="grid col-8">
+              <label className="col-12 mb-2 md:col-2 md:mb-0 label">
+                접수일자
+              </label>
+              <div className="col-12 md:col-2">
+                <Calendar id="buttondisplay" value={date} showIcon />
+              </div>
+              <label className="col-12 mb-2 md:col-2 md:mb-0 label">
+                접수번호
+              </label>
+              <div className="col-12 md:col-2">
+                <InputText id="email3" type="text" />
+              </div>
             </div>
-            <label className="col-12 mb-2 md:col-2 md:mb-0 label">
-              접수번호
-            </label>
-            <div className="col-12 md:col-2">
-              <InputText id="email3" type="text" />
-            </div>
-            <div className="col-12 md:col-1">
-              <Button label="초기화" icon="pi pi-check" />
-            </div>
-            <div className="col-12 md:col-1">
-              <Button label="등록" icon="pi pi-check" />
+            <div className="flex gap-4 col-4 justify-content-end">
+              <Button label="초기화" icon="pi pi-check" className=" w-2" />
+              <Button label="등록" icon="pi pi-check" className=" w-2" />
             </div>
           </div>
         </div>
@@ -403,6 +404,9 @@ const SamplePage1 = () => {
           </div>
         </div>
       </div>
+      {/* <div className="appfooter">
+        <AppFooter />
+      </div> */}
     </div>
   );
 };

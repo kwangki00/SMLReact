@@ -44,7 +44,7 @@ const AppMenu = () => {
       items: [
         {
           label: "의뢰지접수",
-          to: "/samplepage1",
+          to: "/samplepage2",
         },
         {
           label: "OCS접수 및 결과확인",
