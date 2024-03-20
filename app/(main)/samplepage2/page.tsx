@@ -12,7 +12,8 @@ import { Avatar } from "primereact/avatar";
 import { Badge } from "primereact/badge";
 
 const Samplepage2 = () => {
-  const [switchValue, setSwitchValue] = useState(false);
+  const [switchValue, setSwitchValue] = useState(false); //switch
+  const [activeIndex, setActiveIndex] = useState([0, 1, 2]); //accodian state
   return (
     <div className="page-content">
       <div className="card">
@@ -32,7 +33,7 @@ const Samplepage2 = () => {
               </label>
               <InputText id="1" type="text" placeholder="접수번호" />
             </div>
-            <Button label="Search" icon="pi pi-search"></Button>
+            <Button label="검색" icon="pi pi-search"></Button>
           </div>
 
           {/*버튼영역 */}
@@ -93,7 +94,11 @@ const Samplepage2 = () => {
                       </div>
                     </div>
 
-                    <Accordion activeIndex={0}>
+                    <Accordion
+                      multiple
+                      activeIndex={activeIndex}
+                      onTabChange={(e) => setActiveIndex(e.index)}
+                    >
                       <AccordionTab
                         header={
                           <span className="flex align-items-center gap-2 w-full">
@@ -104,17 +109,48 @@ const Samplepage2 = () => {
                           </span>
                         }
                       >
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum dolore eu
-                          fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident, sunt in culpa qui officia
-                          deserunt mollit anim id est laborum.
-                        </p>
+                        <div>
+                          <div className="field grid">
+                            <label htmlFor="email3" className="label">
+                              병원명
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <InputText
+                                id="email3"
+                                type="text"
+                                placeholder="병원코드입력"
+                              />
+                            </div>
+                            <div className="col-12 md:col-3">
+                              <Dropdown placeholder="병원선택" />
+                            </div>
+                            <div className="col-12 md:col-2">
+                              <Button outlined label="병원선택" />
+                            </div>
+                          </div>
+                          <div className="field grid">
+                            <label className="label">접수구분</label>
+                            <div className="col-12 md:col-3">
+                              <Dropdown placeholder="접수구분" />
+                            </div>
+                            <label className="label">검진구분</label>
+                            <div className=" pt-2 col-12 md:col-1">
+                              <InputSwitch
+                                checked={switchValue}
+                                onChange={(e) =>
+                                  setSwitchValue(e.value ?? false)
+                                }
+                              />
+                            </div>
+
+                            <label htmlFor="email3" className="label">
+                              검진종류
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <Dropdown placeholder="검진종류" />
+                            </div>
+                          </div>
+                        </div>
                       </AccordionTab>
                       <AccordionTab header="Header II">
                         <p>
