@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Layout from "../../layout/layout";
 import "../../styles/custom/_component.scss";
 import "../../styles/custom/_style.scss";
+import "../style.css";
 interface MainLayoutProps {
   children: React.ReactNode;
 }

@@ -3,9 +3,13 @@
     display: none;
   }
   .field .label {
-    min-width: 5rem;
+    min-width: 4rem;
     margin-bottom: 0;
     padding-left: 0.5rem;
+  }
+  .field .label2 {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
   }
   .mobile_field {
     margin-bottom: 0;
@@ -123,7 +127,10 @@
   .layout-content-wrapper .layout-content {
     padding: 1rem;
   }
-
+  .page-content_notfooter .field,
+  .page-content .field {
+    margin-bottom: 0;
+  }
   .layout-content .page-content {
     height: 100%;
   }
@@ -134,6 +141,10 @@
   .mobile_field,
   .field .label {
     margin-bottom: 0.5rem;
+  }
+  .field .label2 {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
   }
   .blocked-scroll {
     overflow: hidden;

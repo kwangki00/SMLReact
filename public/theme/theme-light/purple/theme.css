@@ -1825,7 +1825,7 @@
   }
   .p-button.p-button-icon-only {
     width: 2.25rem;
-    padding: 0rem;
+    padding: 0.571rem;
   }
   .p-button.p-button-icon-only .p-button-icon-left,
   .p-button.p-button-icon-only .p-button-icon-right {
@@ -2555,7 +2555,7 @@
     border-radius: 0;
   }
   .p-datatable .p-datatable-header {
-    background: #ffffff;
+    background: #e5e7eb;
     color: rgba(0, 0, 0, 0.87);
     border: 1px solid #e4e4e4;
     border-width: 0 0 1px 0;
@@ -2577,7 +2577,7 @@
     border-width: 0 0 1px 0;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.87);
-    background: #ffffff;
+    background: #e5e7eb;
     transition: none;
   }
   .p-datatable .p-datatable-tfoot > tr > td {
@@ -2720,7 +2720,7 @@
   .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-thead,
   .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-tfoot, .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-virtualscroller > .p-datatable-table > .p-datatable-thead,
   .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-virtualscroller > .p-datatable-table > .p-datatable-tfoot {
-    background-color: #ffffff;
+    background-color: #e5e7eb;
   }
   .p-datatable .p-datatable-loading-icon {
     font-size: 2rem;
@@ -2841,7 +2841,7 @@
     border-radius: 0;
   }
   .p-dataview .p-dataview-header {
-    background: #ffffff;
+    background: #e5e7eb;
     color: rgba(0, 0, 0, 0.87);
     border: 1px solid #e4e4e4;
     border-width: 0 0 1px 0;
@@ -2884,7 +2884,7 @@
     border-radius: 0;
   }
   .p-datascroller .p-datascroller-header {
-    background: #ffffff;
+    background: #e5e7eb;
     color: rgba(0, 0, 0, 0.87);
     border: 1px solid #e4e4e4;
     border-width: 0 0 1px 0;
@@ -3372,7 +3372,7 @@
     border-radius: 0;
   }
   .p-treetable .p-treetable-header {
-    background: #ffffff;
+    background: #e5e7eb;
     color: rgba(0, 0, 0, 0.87);
     border: 1px solid #e4e4e4;
     border-width: 0 0 1px 0;
@@ -3394,7 +3394,7 @@
     border-width: 0 0 1px 0;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.87);
-    background: #ffffff;
+    background: #e5e7eb;
     transition: none;
   }
   .p-treetable .p-treetable-tfoot > tr > td {

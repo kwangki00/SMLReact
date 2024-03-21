@@ -39,11 +39,10 @@ $accentTextColor: #ffffff;
   margin-bottom: 0;
   display: flex;
   gap: 0.5rem;
-  padding-top: 0.5rem;
 }
 .page-content_notfooter {
   width: 100%;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 .page-content {
@@ -61,5 +60,24 @@ $accentTextColor: #ffffff;
 
 //Accodian header padding
 .p-accordion .p-accordion-header .p-accordion-header-link {
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+//캘린더 아이콘버튼 패딩 삭제
+.p-calendar-w-btn .p-datepicker-trigger.p-button {
+  padding: 0;
+}
+
+$var1: 42rem; //의뢰지 접수 데이터 테이블 높이
+
+.datatableHeight {
+  height: calc(100vh - #{$var1});
+}
+
+// .datatableWrap {
+//   $var: 45rem;
+//   height: calc(100vh - #{$var});
+//   overflow: scroll;
+// }
+.contentHeight {
 }

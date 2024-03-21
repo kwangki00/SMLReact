@@ -357,7 +357,7 @@ $inputSwitchHandleOnBg: $primaryColor;
 //panel
 $panelHeaderBorderColor: rgba(255, 255, 255, 0.12) !default;
 $panelHeaderBorder: 1px solid rgba(255, 255, 255, 0.12);
-$panelHeaderBg: #1e1e1e;
+$panelHeaderBg: #1f2d40;
 $panelHeaderTextColor: $textColor;
 $panelHeaderFontWeight: 500;
 $panelHeaderPadding: 1rem;
@@ -369,20 +369,20 @@ $panelHeaderTextHoverColor: $textColor;
 
 $panelContentBorderColor: rgba(255, 255, 255, 0.12) !default;
 $panelContentBorder: 1px solid rgba(255, 255, 255, 0.12);
-$panelContentBg: #1e1e1e;
+$panelContentBg: #1f2d40;
 $panelContentEvenRowBg: rgba(0, 0, 0, 0.02) !default;
 $panelContentTextColor: $textColor;
 $panelContentPadding: 1rem;
 
 $panelFooterBorder: 1px solid rgba(255, 255, 255, 0.12);
-$panelFooterBg: #1e1e1e;
+$panelFooterBg: #1f2d40;
 $panelFooterTextColor: $textColor;
 $panelFooterPadding: 1rem 1rem;
 
 //accordion
 $accordionSpacing: 0;
 $accordionHeaderBorder: 0 none;
-$accordionHeaderBg: #1e1e1e;
+$accordionHeaderBg: #242c36;
 $accordionHeaderTextColor: $textColor;
 $accordionHeaderFontWeight: 400;
 $accordionHeaderPadding: 1.5rem;
@@ -391,7 +391,7 @@ $accordionHeaderHoverBg: rgba(255, 255, 255, 0.04);
 $accordionHeaderHoverBorderColor: transparent;
 $accordionHeaderTextHoverColor: $textColor;
 
-$accordionHeaderActiveBg: #1e1e1e;
+$accordionHeaderActiveBg: #1b232d;
 $accordionHeaderActiveBorderColor: transparent;
 $accordionHeaderTextActiveColor: $textColor;
 
@@ -400,7 +400,7 @@ $accordionHeaderActiveHoverBorderColor: transparent;
 $accordionHeaderTextActiveHoverColor: $textColor;
 
 $accordionContentBorder: 0 none;
-$accordionContentBg: #1e1e1e;
+$accordionContentBg: #1b232d;
 $accordionContentTextColor: $textColor;
 $accordionContentPadding: 1rem 1.5rem;
 
@@ -490,7 +490,7 @@ $tableHeaderFontWeight: 600 !default;
 $tableHeaderPadding: 1rem 1rem !default;
 
 $tableHeaderCellPadding: 1rem 1rem !default;
-$tableHeaderCellBg: $shade800 !default;
+$tableHeaderCellBg: #1b232d !default;
 $tableHeaderCellTextColor: $shade000 !default;
 $tableHeaderCellFontWeight: 600 !default;
 $tableHeaderCellBorder: 1px solid $shade600 !default;

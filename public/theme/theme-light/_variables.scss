@@ -477,13 +477,13 @@ $paginatorElementPadding: 0;
 //table
 $tableHeaderBorder: 1px solid #e4e4e4;
 $tableHeaderBorderWidth: 0 0 1px 0;
-$tableHeaderBg: #ffffff;
+$tableHeaderBg: #e5e7eb;
 $tableHeaderTextColor: $textColor;
 $tableHeaderFontWeight: 500;
 $tableHeaderPadding: 1rem 1rem;
 
 $tableHeaderCellPadding: 1rem 1rem;
-$tableHeaderCellBg: #ffffff;
+$tableHeaderCellBg: #e5e7eb; //컬럼헤더 bg columnheader
 $tableHeaderCellTextColor: $textColor;
 $tableHeaderCellFontWeight: 500;
 $tableHeaderCellBorder: 1px solid #e4e4e4;
