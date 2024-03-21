@@ -13,11 +13,11 @@ import { Badge } from "primereact/badge";
 
 const Samplepage2 = () => {
   const [switchValue, setSwitchValue] = useState(false); //switch
-  const [activeIndex, setActiveIndex] = useState([0, 1, 2] as any); //accodian state
+  const [activeIndex, setActiveIndex] = useState([0, 1, 2, 3] as any); //accodian state
   const [radioValue, setRadioValue] = useState(null); //radiobutton
 
   return (
-    <div className="page-content">
+    <div className=".page-content_notfooter">
       <div className="card">
         <div className="flex justify-content-between align-items-center">
           {/*조건영역 */}
@@ -61,23 +61,23 @@ const Samplepage2 = () => {
                       <label htmlFor="email3" className="label">
                         병원명
                       </label>
-                      <div className="col-12 md:col-3">
+                      <div className="col-12 md:col-3 mobile_field">
                         <InputText
                           id="email3"
                           type="text"
                           placeholder="병원코드입력"
                         />
                       </div>
-                      <div className="col-12 md:col-3">
+                      <div className="col-12 md:col-3 mobile_field">
                         <Dropdown placeholder="병원선택" />
                       </div>
-                      <div className="col-12 md:col-2">
+                      <div className="col-12 md:col-2 mobile_field">
                         <Button outlined label="병원선택" />
                       </div>
                     </div>
                     <div className="field grid">
                       <label className="label">접수구분</label>
-                      <div className="col-12 md:col-3">
+                      <div className="col-12 md:col-3 mobile_field">
                         <Dropdown placeholder="접수구분" />
                       </div>
                       <label className="label">검진구분</label>
@@ -95,7 +95,7 @@ const Samplepage2 = () => {
                         <Dropdown placeholder="검진종류" />
                       </div>
                     </div>
-
+                    {/* 수진자정보 */}
                     <Accordion
                       multiple
                       activeIndex={activeIndex}
@@ -107,6 +107,178 @@ const Samplepage2 = () => {
                             <Avatar icon="pi pi-user" shape="circle" />
                             <span className="font-bold white-space-nowrap">
                               수진자 정보
+                            </span>
+                          </span>
+                        }
+                      >
+                        <div>
+                          <div className="field grid">
+                            <label htmlFor="email3" className="label">
+                              수진자명
+                            </label>
+                            <div className="col-12 md:col-3 mobile_field">
+                              <InputText
+                                id="email3"
+                                type="text"
+                                placeholder="수진자명"
+                              />
+                            </div>
+                            <label htmlFor="email3" className="label">
+                              차트번호
+                            </label>
+                            <div className="col-12 md:col-3 mobile_field">
+                              <InputText
+                                id="email3"
+                                type="text"
+                                placeholder="차트번호"
+                              />
+                            </div>
+                            <label htmlFor="email3" className="label">
+                              성별
+                            </label>
+                            <div className="col-12 md:col-2">
+                              <div className="radiobutton-group">
+                                <div className="field-radiobutton">
+                                  <RadioButton
+                                    inputId="option1"
+                                    name="option"
+                                    value="man"
+                                    checked={radioValue === "man"}
+                                    onChange={(e) => setRadioValue(e.value)}
+                                  />
+                                  <label htmlFor="option1">남</label>
+                                </div>
+                                <div className="field-radiobutton">
+                                  <RadioButton
+                                    inputId="option2"
+                                    name="option"
+                                    value="woman"
+                                    checked={radioValue === "woman"}
+                                    onChange={(e) => setRadioValue(e.value)}
+                                  />
+                                </div>
+                                <label htmlFor="option2">여</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="field grid">
+                            <label className="label">접수구분</label>
+                            <div className="col-12 md:col-3 mobile_field">
+                              <Dropdown placeholder="접수구분" />
+                            </div>
+                            <label className="label">검진구분</label>
+                            <div className=" pt-2 col-12 md:col-1 mobile_field">
+                              <InputSwitch
+                                checked={switchValue}
+                                onChange={(e) =>
+                                  setSwitchValue(e.value ?? false)
+                                }
+                              />
+                            </div>
+
+                            <label htmlFor="email3" className="label">
+                              검진종류
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <Dropdown placeholder="검진종류" />
+                            </div>
+                          </div>
+                        </div>
+                      </AccordionTab>
+
+                      {/* 진료정보 */}
+                      <AccordionTab
+                        header={
+                          <span className="flex align-items-center gap-2 w-full">
+                            <Avatar icon="pi pi-user" shape="circle" />
+                            <span className="font-bold white-space-nowrap">
+                              진료정보
+                            </span>
+                          </span>
+                        }
+                      >
+                        <div>
+                          <div className="field grid">
+                            <label htmlFor="email3" className="label">
+                              수진자명
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <InputText
+                                id="email3"
+                                type="text"
+                                placeholder="수진자명"
+                              />
+                            </div>
+                            <label htmlFor="email3" className="label">
+                              차트번호
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <InputText
+                                id="email3"
+                                type="text"
+                                placeholder="차트번호"
+                              />
+                            </div>
+                            <label htmlFor="email3" className="label">
+                              성별
+                            </label>
+                            <div className="col-12 md:col-2">
+                              <div className="radiobutton-group">
+                                <div className="field-radiobutton">
+                                  <RadioButton
+                                    inputId="option1"
+                                    name="option"
+                                    value="man"
+                                    checked={radioValue === "man"}
+                                    onChange={(e) => setRadioValue(e.value)}
+                                  />
+                                  <label htmlFor="option1">남</label>
+                                </div>
+                                <div className="field-radiobutton">
+                                  <RadioButton
+                                    inputId="option2"
+                                    name="option"
+                                    value="woman"
+                                    checked={radioValue === "woman"}
+                                    onChange={(e) => setRadioValue(e.value)}
+                                  />
+                                </div>
+                                <label htmlFor="option2">여</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="field grid">
+                            <label className="label">접수구분</label>
+                            <div className="col-12 md:col-3">
+                              <Dropdown placeholder="접수구분" />
+                            </div>
+                            <label className="label">검진구분</label>
+                            <div className=" pt-2 col-12 md:col-1">
+                              <InputSwitch
+                                checked={switchValue}
+                                onChange={(e) =>
+                                  setSwitchValue(e.value ?? false)
+                                }
+                              />
+                            </div>
+
+                            <label htmlFor="email3" className="label">
+                              추가정보
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <Dropdown placeholder="검진종류" />
+                            </div>
+                          </div>
+                        </div>
+                      </AccordionTab>
+
+                      {/* 추가정보 */}
+                      <AccordionTab
+                        header={
+                          <span className="flex align-items-center gap-2 w-full">
+                            <Avatar icon="pi pi-user" shape="circle" />
+                            <span className="font-bold white-space-nowrap">
+                              국적정보
                             </span>
                           </span>
                         }
@@ -185,31 +357,91 @@ const Samplepage2 = () => {
                           </div>
                         </div>
                       </AccordionTab>
-                      <AccordionTab header="Header II">
-                        <p>
-                          Sed ut perspiciatis unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium, totam
-                          rem aperiam, eaque ipsa quae ab illo inventore
-                          veritatis et quasi architecto beatae vitae dicta sunt
-                          explicabo. Nemo enim ipsam voluptatem quia voluptas
-                          sit aspernatur aut odit aut fugit, sed quia
-                          consequuntur magni dolores eos qui ratione voluptatem
-                          sequi nesciunt. Consectetur, adipisci velit, sed quia
-                          non numquam eius modi.
-                        </p>
-                      </AccordionTab>
-                      <AccordionTab header="Header III">
-                        <p>
-                          At vero eos et accusamus et iusto odio dignissimos
-                          ducimus qui blanditiis praesentium voluptatum deleniti
-                          atque corrupti quos dolores et quas molestias
-                          excepturi sint occaecati cupiditate non provident,
-                          similique sunt in culpa qui officia deserunt mollitia
-                          animi, id est laborum et dolorum fuga. Et harum quidem
-                          rerum facilis est et expedita distinctio. Nam libero
-                          tempore, cum soluta nobis est eligendi optio cumque
-                          nihil impedit quo minus.
-                        </p>
+
+                      {/* 국정정보 */}
+                      <AccordionTab
+                        header={
+                          <span className="flex align-items-center gap-2 w-full">
+                            <Avatar icon="pi pi-user" shape="circle" />
+                            <span className="font-bold white-space-nowrap">
+                              국적정보
+                            </span>
+                          </span>
+                        }
+                      >
+                        <div>
+                          <div className="field grid">
+                            <label htmlFor="email3" className="label">
+                              수진자명
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <InputText
+                                id="email3"
+                                type="text"
+                                placeholder="수진자명"
+                              />
+                            </div>
+                            <label htmlFor="email3" className="label">
+                              차트번호
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <InputText
+                                id="email3"
+                                type="text"
+                                placeholder="차트번호"
+                              />
+                            </div>
+                            <label htmlFor="email3" className="label">
+                              성별
+                            </label>
+                            <div className="col-12 md:col-2">
+                              <div className="radiobutton-group">
+                                <div className="field-radiobutton">
+                                  <RadioButton
+                                    inputId="option1"
+                                    name="option"
+                                    value="man"
+                                    checked={radioValue === "man"}
+                                    onChange={(e) => setRadioValue(e.value)}
+                                  />
+                                  <label htmlFor="option1">남</label>
+                                </div>
+                                <div className="field-radiobutton">
+                                  <RadioButton
+                                    inputId="option2"
+                                    name="option"
+                                    value="woman"
+                                    checked={radioValue === "woman"}
+                                    onChange={(e) => setRadioValue(e.value)}
+                                  />
+                                </div>
+                                <label htmlFor="option2">여</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="field grid">
+                            <label className="label">접수구분</label>
+                            <div className="col-12 md:col-3">
+                              <Dropdown placeholder="접수구분" />
+                            </div>
+                            <label className="label">검진구분</label>
+                            <div className=" pt-2 col-12 md:col-1">
+                              <InputSwitch
+                                checked={switchValue}
+                                onChange={(e) =>
+                                  setSwitchValue(e.value ?? false)
+                                }
+                              />
+                            </div>
+
+                            <label htmlFor="email3" className="label">
+                              검진종류
+                            </label>
+                            <div className="col-12 md:col-3">
+                              <Dropdown placeholder="검진종류" />
+                            </div>
+                          </div>
+                        </div>
                       </AccordionTab>
                     </Accordion>
                   </div>

@@ -1874,6 +1874,9 @@ a {
     margin-bottom: 0;
     padding-left: 0.5rem;
   }
+  .mobile_field {
+    margin-bottom: 0;
+  }
   .layout-topbar-title {
     font-size: 1.5rem;
     color: var(--topbar-item-text-title-color);
@@ -1956,9 +1959,11 @@ a {
   .layout-content .page-content {
     height: 100%;
   }
+  .page-content_notfooter .col-12,
   .page-content .col-12 {
     margin-bottom: 1rem;
   }
+  .mobile_field,
   .field .label {
     margin-bottom: 0.5rem;
   }
