@@ -2,6 +2,14 @@
   .layout-breadcrumb-container {
     display: none;
   }
+  body {
+    overflow: hidden;
+  }
+  .layout-footer .p-button {
+    //푸터 기능버튼 마진값
+    margin-left: 1rem;
+  }
+
   .field .label {
     min-width: 4rem;
     margin-bottom: 0;
@@ -16,7 +24,7 @@
   }
   .layout-topbar-title {
     font-size: 1.5rem;
-    color: var(--topbar-item-text-title-color);
+    color: var(--surface-900);
     text-align: center;
     vertical-align: middle;
     font-weight: bold;
@@ -120,10 +128,20 @@
       }
     }
   }
+
+  //좌측카드 높이설정
+  .left-card {
+    height: calc(100vh - 17rem);
+  }
 }
 
 //Mobile
 @media screen and (max-width: ($breakpoint - 1)) {
+  .layout-footer .p-button {
+    //푸터 기능버튼 마진값
+    margin: 1rem 1rem 0 1rem;
+  }
+
   .layout-content-wrapper .layout-content {
     padding: 1rem;
   }
@@ -312,6 +330,16 @@
     .layout-topbar-end {
       display: none;
     }
+  }
+
+  //-------모바일에서 탭뷰 컨텐츠 패딩 수정------//
+  .p-tabview .p-tabview-panels {
+    padding: 0.75rem 0;
+  }
+
+  //좌측카드 높이설정
+  .left-card {
+    height: 100%;
   }
 }
 

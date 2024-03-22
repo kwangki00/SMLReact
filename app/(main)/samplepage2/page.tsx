@@ -17,6 +17,7 @@ import { ProductService } from "../../service/ProductService";
 import { Toolbar } from "primereact/toolbar";
 import { CustomerService } from "@/app/service/CustomerService";
 import AppFooter from "@/layout/AppFooter";
+import "./style.scss";
 const Samplepage2 = () => {
   const [switchValue, setSwitchValue] = useState(false); //switch
   const [activeIndex, setActiveIndex] = useState([0, 1] as any); //accodian state
@@ -40,19 +41,27 @@ const Samplepage2 = () => {
 
   const leftToolbarTemplate = () => {
     return (
-      <div className="flex flex-wrap gap-2">
-        <Button
-          icon="pi pi-trash"
-          severity="danger"
-          outlined
-          disabled={!selectedProducts}
-        />
+      <div className="flex flex-wrap gap-2 align-items-center">
+        <div className="label-rec"></div>
+        <h5>검사항목</h5>
       </div>
     );
   };
 
   const rightToolbarTemplate = () => {
-    return <Button icon="pi pi-upload" outlined className="p-button-help" />;
+    return (
+      <>
+        <div className="flex gap-2">
+          <Button
+            icon="pi pi-trash"
+            severity="danger"
+            outlined
+            disabled={!selectedProducts}
+          />
+          <Button icon="pi pi-upload" outlined className="p-button-help" />
+        </div>
+      </>
+    );
   };
 
   //customers sampledata
@@ -67,50 +76,37 @@ const Samplepage2 = () => {
   return (
     <div className="page-content_notfooter">
       {/* 조회조건 */}
-      <div className="card">
-        <div className="flex justify-content-between align-items-center">
-          {/*조건영역 */}
-          <div className="formgroup-inline gap-5">
-            <div>
-              <label htmlFor="buttondisplay" className="label1_s">
-                접수일자
-              </label>
-              <Calendar
-                showIcon
-                placeholder="접수일자"
-                dateFormat="yy/dd/mm"
-                showButtonBar
-              />
-            </div>
-
-            <div>
-              <label htmlFor="1" className="label1_s">
-                접수번호
-              </label>
-              <InputText id="1" type="text" placeholder="접수번호" />
-            </div>
-            <Button label="검색" icon="pi pi-search"></Button>
+      <div className="card p-fluid">
+        <div className="field grid mb-0">
+          <label className="label">접수일자</label>
+          <div className="col-12 md:col-2 mobile_field">
+            <Calendar
+              showIcon
+              placeholder="접수일자"
+              dateFormat="yy/dd/mm"
+              showButtonBar
+            />
           </div>
-
-          {/*버튼영역 */}
-          {/* <div>
-            <Button
-              label="최종제출"
-              icon="pi pi-cloud-upload"
-              severity="secondary"
-            ></Button>
-          </div> */}
+          <label className="label">접수번호</label>
+          <div className="col-12 md:col-2 mobile_field">
+            <InputText id="1" type="text" placeholder="접수번호" />
+          </div>
+          <div className="col-12 md:col-1 mobile_field flex gap-2">
+            <Button label="검색" icon="pi pi-search"></Button>
+            <Button icon="pi pi-refresh" outlined />
+          </div>
         </div>
       </div>
 
       {/*조회 결과 부분 */}
       <div className="grid">
+        {/* 좌측영역 */}
         <div className="col-12 md:col-6">
-          <div className="card p-fluid">
+          <div className="card p-fluid  left-card">
             <div className=" h-full">
               <TabView>
                 <TabPanel header="기본정보(F1)">
-                  <div className="col-12 md:col-12 contentHeight">
+                  <div className="col-12 md:col-12 tab-content-height">
                     <div className="field grid">
                       <label htmlFor="email3" className="label">
                         병원명
@@ -282,7 +278,7 @@ const Samplepage2 = () => {
                             <label htmlFor="email3" className="label">
                               채취일시
                             </label>
-                            <div className="col-12 md:col-4 mobile_field">
+                            <div className="col-12 md:col-3 mobile_field">
                               <Calendar
                                 showIcon
                                 placeholder="채취일시"
@@ -447,6 +443,7 @@ const Samplepage2 = () => {
           </div>
         </div>
 
+        {/* 우측영역 */}
         <div className="col-12 md:col-6">
           <div className="card p-fluid cardHeight">
             <div className="field">
@@ -459,7 +456,7 @@ const Samplepage2 = () => {
                   value={products}
                   scrollable
                   scrollHeight="100%"
-                  className="datatableHeight"
+                  className="datatableHeight mobiledatatableHeight"
                   selectionMode={rowClick ? null : "checkbox"}
                   tableStyle={{ minWidth: "50rem" }}
                   selection={selectedProducts}

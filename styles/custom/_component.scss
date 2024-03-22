@@ -2,6 +2,11 @@ $accentColor: #4f78ff;
 $gray0: #565d6d;
 $accentTextColor: #ffffff;
 
+//버튼
+.p-button.p-button-icon-only {
+  padding: 0.5rem;
+}
+
 //Input
 
 .p-inputtext:enabled:hover {
@@ -68,16 +73,36 @@ $accentTextColor: #ffffff;
   padding: 0;
 }
 
-$var1: 42rem; //의뢰지 접수 데이터 테이블 높이
+//----------접수 테이블 높이------------//
+$var1: 41rem; //의뢰지 접수 데이터테이블 높이
 
 .datatableHeight {
   height: calc(100vh - #{$var1});
 }
+//----------모바일 접수 테이블 높이------------//
+@media screen and (max-width: 991px) {
+  .mobiledatatableHeight {
+    height: 30rem;
+  }
+}
 
-// .datatableWrap {
-//   $var: 45rem;
-//   height: calc(100vh - #{$var});
-//   overflow: scroll;
-// }
-.contentHeight {
+.layout-topbar-search .p-inputtext {
+  border-radius: 5rem;
+  background-color: var(--surface-200);
+  border: 1px solid var(--surface-200);
+}
+//-------------toolbar(툴바)------------//
+.label-rec {
+  width: 0.286rem;
+  height: 1.214rem;
+  background: var(--primary-500);
+}
+//툴바패딩
+.p-toolbar {
+  padding: 0.5rem 0;
+}
+
+.p-toolbar h5 {
+  margin: 0;
+  font-size: 1.143rem;
 }
