@@ -1963,9 +1963,6 @@ a {
   .layout-container.layout-overlay.layout-overlay-active .layout-topbar .layout-menu-button i {
     transform: rotate(180deg);
   }
-  .left-card {
-    height: calc(100vh - 17rem);
-  }
 }
 @media screen and (max-width: 991px) {
   .layout-footer .p-button {
