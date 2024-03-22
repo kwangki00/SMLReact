@@ -78,12 +78,7 @@ $accentTextColor: #ffffff;
   border-radius: 0.3rem;
   overflow: hidden;
 }
-//----------접수 테이블(table) 높이------------//
-$var1: 41rem; //의뢰지 접수 데이터테이블 높이
 
-.datatableHeight {
-  height: calc(100vh - #{$var1});
-}
 //----------모바일 접수 테이블 높이------------//
 @media screen and (max-width: 991px) {
   .mobiledatatableHeight {
