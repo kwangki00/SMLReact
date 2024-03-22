@@ -8,15 +8,15 @@ interface MainLayoutProps {
 }
 
 export const metadata: Metadata = {
-  title: "삼광의료재단 영업관리시스템",
-  description: "삼광의료재단 영업관리 시스템",
+  title: "삼광의료재단 영업마케팅 시스템(SMIS)",
+  description: "삼광의료재단 영업마케팅 시스템(SMIS)",
   robots: { index: false, follow: false },
   viewport: { initialScale: 1, width: "device-width" },
   openGraph: {
     type: "website",
-    title: "삼광의료재단 영업관리시스템",
+    title: "삼광의료재단 영업마케팅 시스템(SMIS)",
     url: "",
-    description: "삼광의료재단 영업관리 시스템",
+    description: "삼광의료재단 영업마케팅 시스템(SMIS)",
     ttl: 604800,
   },
   icons: {
