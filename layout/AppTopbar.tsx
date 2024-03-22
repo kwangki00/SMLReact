@@ -377,7 +377,9 @@ const AppTopbar = forwardRef<AppTopbarRef>((props, ref) => {
               </div>
             </li>
             <li>
-              <a onClick={onRightMenuButtonClick} className="p-ripple">
+              <a className="p-ripple">
+                {" "}
+                {/*onClick={onRightMenuButtonClick} */}
                 <i className="pi pi-star-fill"></i>
               </a>
             </li>

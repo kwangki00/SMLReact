@@ -1,4 +1,14 @@
-.tab-content-height {
-  height: calc(100vh - 23rem);
-  overflow-y: auto;
+@media screen and (min-width: 992px) {
+  .tab-content-height {
+    height: calc(100vh - 23rem);
+    overflow-y: auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  .tab-content-height {
+    height: 100%;
+  }
+}
+.datatableHeight {
+  height: calc(100vh - 46.6rem);
 }/*# sourceMappingURL=style.css.map */

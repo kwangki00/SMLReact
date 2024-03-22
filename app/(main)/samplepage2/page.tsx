@@ -17,6 +17,7 @@ import { ProductService } from "../../service/ProductService";
 import { Toolbar } from "primereact/toolbar";
 import { CustomerService } from "@/app/service/CustomerService";
 import AppFooter from "@/layout/AppFooter";
+import { Checkbox, CheckboxChangeEvent } from "primereact/checkbox";
 import "./style.scss";
 const Samplepage2 = () => {
   const [switchValue, setSwitchValue] = useState(false); //switch
@@ -39,9 +40,10 @@ const Samplepage2 = () => {
     ProductService.getProducts().then((data) => setProducts(data as any));
   }, []);
 
+  //툴바 템플릿
   const leftToolbarTemplate = () => {
     return (
-      <div className="flex flex-wrap gap-2 align-items-center">
+      <div className="flex flex-wrap column-gap-2 align-items-center">
         {/* 툴바왼쪽영역 */}
         <div className="flex gap-2">
           <div className="label-rec"></div>
@@ -51,28 +53,56 @@ const Samplepage2 = () => {
       </div>
     );
   };
-
   const rightToolbarTemplate = () => {
     return (
       <>
         {/* 툴바오른쪽영역 */}
-        <div className="flex gap-2">
-          <div className="field flex align-items-center gap-2  m-0">
-            <label className="label">검사조회</label>
+        <div className="field grid mb-0 column-gap-2 px-2 align-items-center md:justify-content-end">
+          <label className="label">검사조회</label>
+          <div className="col-12 md:col-5 p-0">
             <InputText type="text" placeholder="명칭코드(F8)" />
+          </div>
+          <div className="col-12 md:col-4 p-0">
             <Button outlined label="검사항목등록(F9)" />
           </div>
-          <Button
-            icon="pi pi-trash"
-            severity="danger"
-            outlined
-            className=" hidden"
-            disabled={!selectedProducts}
-          />
-          <Button icon="pi pi-upload" outlined className="p-button-help" />
         </div>
       </>
     );
+  };
+  const leftToolbarTemplate2 = () => {
+    return (
+      <div className="flex flex-wrap column-gap-2 align-items-center">
+        {/* 툴바왼쪽영역 */}
+        <div className="flex gap-2">
+          <div className="label-rec"></div>
+          <h5>History</h5>
+          <p>총20건/4건 선택</p>
+        </div>
+      </div>
+    );
+  };
+  const rightToolbarTemplate2 = () => {
+    return (
+      <>
+        {/* 툴바오른쪽영역 */}
+        <div className="field grid mb-0 column-gap-2 px-2 align-items-center md:justify-content-end">
+          <label className="label">검사조회</label>
+          <div className="col-12 md:col-8 p-0">
+            <InputText type="text" placeholder="명칭코드(F8)" />
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  //checkbox
+  const [checkboxValue, setCheckboxValue] = useState<string[]>([]);
+  const onCheckboxChange = (e: CheckboxChangeEvent) => {
+    let selectedValue = [...checkboxValue];
+    if (e.checked) selectedValue.push(e.value);
+    else selectedValue.splice(selectedValue.indexOf(e.value), 1);
+
+    setCheckboxValue(selectedValue);
   };
 
   //customers sampledata
@@ -468,10 +498,10 @@ const Samplepage2 = () => {
                 scrollable
                 scrollHeight="100%"
                 className="datatableHeight mobiledatatableHeight table-border"
-                selectionMode={rowClick ? null : "checkbox"}
+                selectionMode={"single"}
                 tableStyle={{ minWidth: "50rem" }}
                 selection={selectedProducts}
-                onSelectionChange={(e) => setSelectedProducts(e.value)}
+                onSelectionChange={(e: any) => setSelectedProducts(e.value)}
                 dataKey="id"
               >
                 <Column
@@ -485,25 +515,64 @@ const Samplepage2 = () => {
                 <Column field="inventoryStatus" header="검사부서"></Column>
               </DataTable>
             </div>
-            <div className="col-12 md:col-2 p-0">
-              <Button outlined label="CMT일괄적용" />
+            {/* 그리드 아래쪽 컨트롤들 */}
+            <div className="field grid mb-0 column-gap-2 px-2 align-items-center">
+              <div className="col-12 md:col-2 p-0 mobile_field mt-3 md:mt-0">
+                <Button outlined label="CMT일괄적용" />
+              </div>
+              <div className="col-12 md:col-2 p-0">
+                <Dropdown placeholder="병원선택" />
+              </div>
+              <div className="flex gap-3">
+                <div className="field-checkbox">
+                  <Checkbox
+                    inputId="checkOption1"
+                    name="option"
+                    value="v1"
+                    checked={checkboxValue.indexOf("v1") !== -1}
+                    onChange={onCheckboxChange}
+                  />
+                  <label htmlFor="checkOption1">코드유지</label>
+                </div>
+                <div className="field-checkbox">
+                  <Checkbox
+                    inputId="checkOption2"
+                    name="option"
+                    value="v2"
+                    checked={checkboxValue.indexOf("v2") !== -1}
+                    onChange={onCheckboxChange}
+                  />
+                  <label htmlFor="checkOption2">접수정보유지</label>
+                </div>
+                <div className="field-checkbox">
+                  <Checkbox
+                    inputId="checkOption3"
+                    name="option"
+                    value="v3"
+                    checked={checkboxValue.indexOf("v3") !== -1}
+                    onChange={onCheckboxChange}
+                  />
+                  <label htmlFor="checkOption3">검진정보유지</label>
+                </div>
+              </div>
             </div>
           </div>
           {/* 두번째그리드영역 */}
           <div className="card p-fluid">
+            <Toolbar
+              left={leftToolbarTemplate2}
+              right={rightToolbarTemplate2}
+            ></Toolbar>
             <DataTable
               value={customers}
               scrollable
+              className="table-border"
               scrollHeight="15rem"
               style={{ minWidth: "50rem" }}
             >
-              <Column field="name" header="Name"></Column>
-              <Column field="country.name" header="Country"></Column>
-              <Column
-                field="representative.name"
-                header="Representative"
-              ></Column>
-              <Column field="company" header="Company"></Column>
+              <Column field="name" header="검사코드"></Column>
+              <Column field="country.name" header="검사항목"></Column>
+              <Column field="company" header="검사부서"></Column>
             </DataTable>
           </div>
         </div>
