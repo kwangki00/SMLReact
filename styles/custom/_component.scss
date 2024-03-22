@@ -72,8 +72,13 @@ $accentTextColor: #ffffff;
 .p-calendar-w-btn .p-datepicker-trigger.p-button {
   padding: 0;
 }
-
-//----------접수 테이블 높이------------//
+//--------------table------------//
+.table-border {
+  border: 1px solid var(--surface-200);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+//----------접수 테이블(table) 높이------------//
 $var1: 41rem; //의뢰지 접수 데이터테이블 높이
 
 .datatableHeight {

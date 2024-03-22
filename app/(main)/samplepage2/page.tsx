@@ -42,8 +42,12 @@ const Samplepage2 = () => {
   const leftToolbarTemplate = () => {
     return (
       <div className="flex flex-wrap gap-2 align-items-center">
-        <div className="label-rec"></div>
-        <h5>검사항목</h5>
+        {/* 툴바왼쪽영역 */}
+        <div className="flex gap-2">
+          <div className="label-rec"></div>
+          <h5>검사항목</h5>
+          <p>총20건/4건 선택</p>
+        </div>
       </div>
     );
   };
@@ -51,11 +55,18 @@ const Samplepage2 = () => {
   const rightToolbarTemplate = () => {
     return (
       <>
+        {/* 툴바오른쪽영역 */}
         <div className="flex gap-2">
+          <div className="field flex align-items-center gap-2  m-0">
+            <label className="label">검사조회</label>
+            <InputText type="text" placeholder="명칭코드(F8)" />
+            <Button outlined label="검사항목등록(F9)" />
+          </div>
           <Button
             icon="pi pi-trash"
             severity="danger"
             outlined
+            className=" hidden"
             disabled={!selectedProducts}
           />
           <Button icon="pi pi-upload" outlined className="p-button-help" />
@@ -443,40 +454,43 @@ const Samplepage2 = () => {
           </div>
         </div>
 
-        {/* 우측영역 */}
+        {/* 탭1 우측영역 */}
         <div className="col-12 md:col-6">
+          {/* 첫번째그리드영역 */}
           <div className="card p-fluid cardHeight">
             <div className="field">
               <Toolbar
                 left={leftToolbarTemplate}
                 right={rightToolbarTemplate}
               ></Toolbar>
-              <div className="datatableWrap">
-                <DataTable
-                  value={products}
-                  scrollable
-                  scrollHeight="100%"
-                  className="datatableHeight mobiledatatableHeight"
-                  selectionMode={rowClick ? null : "checkbox"}
-                  tableStyle={{ minWidth: "50rem" }}
-                  selection={selectedProducts}
-                  onSelectionChange={(e) => setSelectedProducts(e.value)}
-                  dataKey="id"
-                >
-                  <Column
-                    selectionMode="multiple"
-                    headerStyle={{ width: "3rem" }}
-                  ></Column>
-                  <Column field="code" header="검사코드"></Column>
-                  <Column field="name" header="검사항목"></Column>
-                  <Column field="category" header="검체"></Column>
-                  <Column field="quantity" header="총뇨량"></Column>
-                  <Column field="inventoryStatus" header="검사부서"></Column>
-                </DataTable>
-              </div>
+              <DataTable
+                value={products}
+                scrollable
+                scrollHeight="100%"
+                className="datatableHeight mobiledatatableHeight table-border"
+                selectionMode={rowClick ? null : "checkbox"}
+                tableStyle={{ minWidth: "50rem" }}
+                selection={selectedProducts}
+                onSelectionChange={(e) => setSelectedProducts(e.value)}
+                dataKey="id"
+              >
+                <Column
+                  selectionMode="multiple"
+                  headerStyle={{ width: "3rem" }}
+                ></Column>
+                <Column field="code" header="검사코드"></Column>
+                <Column field="name" header="검사항목"></Column>
+                <Column field="category" header="검체"></Column>
+                <Column field="quantity" header="총뇨량"></Column>
+                <Column field="inventoryStatus" header="검사부서"></Column>
+              </DataTable>
+            </div>
+            <div className="col-12 md:col-2 p-0">
+              <Button outlined label="CMT일괄적용" />
             </div>
           </div>
-          <div className="card  p-fluid">
+          {/* 두번째그리드영역 */}
+          <div className="card p-fluid">
             <DataTable
               value={customers}
               scrollable
