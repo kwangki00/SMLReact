@@ -1,7 +1,10 @@
 @media screen and (min-width: 992px) {
   .tab-content-height {
-    height: calc(100vh - 23rem);
+    height: calc(100vh - 21rem);
     overflow-y: auto;
+  }
+  .left-card {
+    height: calc(100vh - 15rem);
   }
 }
 @media screen and (max-width: 991px) {
@@ -10,5 +13,5 @@
   }
 }
 .datatableHeight {
-  height: calc(100vh - 46.6rem);
+  height: calc(100vh - 44.6rem);
 }/*# sourceMappingURL=style.css.map */
